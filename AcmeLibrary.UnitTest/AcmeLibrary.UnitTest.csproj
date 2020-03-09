@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ControllerTests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AcmeLibrary\AcmeLibrary.csproj" />
   </ItemGroup>
 

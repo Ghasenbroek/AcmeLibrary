@@ -11,11 +11,12 @@ namespace AcmeLibrary.Models
   {
     [Key]
     public int BookLocationId { get; set; }
-    [ForeignKey("Book")]
-    public string BookId { get; set; }
-    public virtual Book Book { get; set; }
-    [ForeignKey("BookShelf")]
-    public string BookShelfId { get; set; }
+    [ForeignKey("Book"), Required]
+    public int BookId { get; set; }
+    public Book Book { get; set; }
+    [ForeignKey("BookShelfId"),Required]
+    public int BookShelfId { get; set; }
     public virtual BookShelf BookShelf { get; set; }
+    public ICollection<Book> Books { get; set; }
   }
 }

@@ -17,5 +17,7 @@ namespace AcmeLibrary.Models
     public int ShelfNumber { get; set; }
     [Column(TypeName = "nvarchar(100)")]
     public string SubSection { get; set; }
+
+    public ICollection<BookLocation> BookLocation { get; set; }
   }
 }

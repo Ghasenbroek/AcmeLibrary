@@ -10,7 +10,7 @@ namespace AcmeLibrary.Models
   public class Book
   {
     [Key]
-    public int BookID { get; set; }
+    public int BookId { get; set; }
     [Column(TypeName = "nvarchar(250)")]
     public string Title { get; set; }
     [Column(TypeName = "nvarchar(500)")]
@@ -19,5 +19,7 @@ namespace AcmeLibrary.Models
     public string ISBN { get; set; }
     [Column(TypeName = "nvarchar(100)")]
     public string Condition { get; set; }
+    public ICollection<CheckedOutBook> CheckedOutBook { get; set; }
+
   }
 }

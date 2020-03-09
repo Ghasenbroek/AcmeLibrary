@@ -18,7 +18,7 @@ namespace AcmeLibrary.Models
     [Column(TypeName = "nvarchar(13)")]
     public string IdNumber { get; set; }
     [ForeignKey("User")]
-    public string UserID { get; set; }
+    public int UserId { get; set; }
     public virtual User User { get; set; }
     [Column(TypeName = "datetime")]
     public DateTime CreatedDateTime { get; set; }
